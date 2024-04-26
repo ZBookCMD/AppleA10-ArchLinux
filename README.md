@@ -1,7 +1,8 @@
 # Arch Linux ARM for A10(X) Fusion
 Thats guide based on Project Sandcastle repositories and postmarketOS guide. \
-**Partially works with palera1n \ iOS 15.x.**
+**Works with palera1n \ iOS 15.x.**
 Tested on iPhone 7 Plus with iOS 15.8.1
+Will update when possible
 
 > [!IMPORTANT]
 > The instruction provides that user knows how to work with CLI and knows basic UNIX commands. If not, check out the Arch Linux Wiki, man pages or Wikipedia.
@@ -243,6 +244,13 @@ Use the resulting files `dtbpack`, `ramdisk.cpio.gz` and `Image.lzma` for boot. 
 [^1]: palera1n is used for jailbreak iDevices with iOS 15.x, you can download this from [GitHub](https://github.com/palera1n/palera1n/releases)
 [^2]: checkra1n same thing like palera1n, but 1337 version is just boot PongoOS, which can be used with iOS 15.x, even 16.x. [Download](https://checkra.in/1337) \
 You can use usual checkra1n if you running iOS 14. [WebSite](https://checkra.in/releases)
+
+<details>
+  <summary>
+    
+  ## neofetch output </summary>
+  ![](/neofetch.jpg)
+</details>
 
 ## Thanks to
 [Linus Torvalds](https://github.com/torvalds) for Linux \
