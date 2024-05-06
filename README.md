@@ -1,8 +1,8 @@
 # Arch Linux ARM for A10(X) Fusion
 Thats guide based on Project Sandcastle repositories and postmarketOS guide. \
-**Works with palera1n \ iOS 15.x.**
-Tested on iPhone 7 Plus with iOS 15.8.1
-Will update when possible
+**Works with palera1n \ iOS 15.x.** \
+Tested on iPhone 7 Plus with iOS 15.8.1 \
+I hope to be able to publish an image with the system soon so people don't have to build it manually. Also hopefully there will be more features. You can still contact me on issues or [Telegram](https://t.me/cocoshark)
 
 > [!IMPORTANT]
 > The instruction provides that user knows how to work with CLI and knows basic UNIX commands. If not, check out the Arch Linux Wiki, man pages or Wikipedia.
@@ -15,15 +15,15 @@ Will update when possible
 ## What's working now?
 - [x] CPU
 - [x] Storage
+- [x] Battery
 - [x] Power button
 - [x] Display (tty)
 - [x] USB-Lightning (CDC, USB-Modem)
-- [ ] Battery (?)
-- [ ] Cameras
 - [ ] Touchscreen (needs test)
-- [ ] Graphical interface (Xorg\Wayland)
+- [ ] Graphical interface (now only VNC)
 - [ ] Broadcom BCM4355 (WiFi, Bluetooth)
 - [ ] Intel XMM7360 (WWAN)
+- [ ] Cameras (no driver)
 
 <details>
 <summary>
@@ -247,9 +247,36 @@ You can use usual checkra1n if you running iOS 14. [WebSite](https://checkra.in/
 
 <details>
   <summary>
-    
-  ## neofetch output </summary>
-  ![](/neofetch.jpg)
+  
+  ## Additional information</summary>
+### Check battery status
+````
+upower -i /org/freedesktop/UPower/devices/battery_battery
+````
+
+### Configure Ethernet with NetworkManager
+Check the status of services
+````
+systemctl status NetworkManager
+systemctl status dhcpcd
+````
+
+Create a connection and assign IP addresses for PC and iDevice. \
+Set the manual mode and “UP” the connection.
+````
+nmcli con add con-name "USB Static" ifname usb0 type ethernet ip4 172.16.1.1/24 gw4 172.16.1.2
+nmcli con mod "USB Static" ipv4.method manual
+ncmli con up "USB Static" ifname usb0
+````
+
+You can check the status by entering the command \
+`nmcli con show` \
+After that, set static IP addresses on the PC side, where \
+| IP address (PC)  | Netmask       | Gateway (iDevice) |
+| ---              | ---           | ---               |
+| 172.16.1.2       | 255.255.255.0 | 172.16.1.1        |
+
+![photo where left is CDC, right is SSH](/CDC_SSH.jpg)
 </details>
 
 ## Thanks to
