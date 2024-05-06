@@ -2,6 +2,7 @@
 Thats guide based on Project Sandcastle repositories and postmarketOS guide. \
 **Works with palera1n \ iOS 15.x.** \
 Tested on iPhone 7 Plus with iOS 15.8.1 \
+And iPhone 7[^3] with iOS 14.4.2\ 
 I hope to be able to publish an image with the system soon so people don't have to build it manually. Also hopefully there will be more features. You can still contact me on issues or [Telegram](https://t.me/cocoshark)
 
 > [!IMPORTANT]
@@ -244,6 +245,7 @@ Use the resulting files `dtbpack`, `ramdisk.cpio.gz` and `Image.lzma` for boot. 
 [^1]: palera1n is used for jailbreak iDevices with iOS 15.x, you can download this from [GitHub](https://github.com/palera1n/palera1n/releases)
 [^2]: checkra1n same thing like palera1n, but 1337 version is just boot PongoOS, which can be used with iOS 15.x, even 16.x. [Download](https://checkra.in/1337) \
 You can use usual checkra1n if you running iOS 14. [WebSite](https://checkra.in/releases)
+[^3]: thanks to [Thinkdev1](https://github.com/thinkdev1) for testing port on iPhone 7 with iOS 14.
 
 <details>
   <summary>
