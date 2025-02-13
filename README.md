@@ -3,7 +3,7 @@ Thats guide based on Project Sandcastle repositories and postmarketOS guide. \
 **Works with palera1n \ iOS 15.x.** \
 Tested on iPhone 7 Plus with iOS 15.8.1 \
 And iPhone 7[^3] with iOS 14.4.2\ 
-I hope to be able to publish an image with the system soon so people don't have to build it manually. Also hopefully there will be more features. You can still contact me on issues or [Telegram](https://t.me/cocoshark)
+I hope to be able to publish an image with the system soon so people don't have to build it manually. Also hopefully there will be more features. You can still contact me on issues or [Telegram](https://t.me/user_msm8953)
 
 > [!IMPORTANT]
 > The instruction provides that user knows how to work with CLI and knows basic UNIX commands. If not, check out the Arch Linux Wiki, man pages or Wikipedia.
